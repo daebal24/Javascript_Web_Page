@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>이카운트 1조</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<script type="text/javascript" src="canvas.js"></script>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
+
+						<!-- Logo -->
+						<h1 id="logo"><a href="home.html">HOME</a></h1>
+
+						<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="home.html">HOME</a></li>
+								<li>
+									<a href="#">ABOUT</a>
+									<ul>
+										<li><a href="portfolio/김보라.html">김보라</a></li>
+										<li><a href="portfolio/안현욱.html">안현욱</a></li>
+										<li><a href="portfolio/이대익.html">이대익</a></li>
+										<li><a href="portfolio/임현기.html">임현기</a></li>
+									</ul>
+								</li>
+								<li><a href="map.html">MAP</a></li>
+								<li class="break"><a href="canvas.html">CANVAS</a></li>
+								<li><a href="svg.html">SVG</a></li>
+								<li><a href="kanban.html">KANBAN</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper">
+					<div class="container" id="main">
+
+						<!-- Content -->
+							<article id="content">
+								<header>
+									<h2>Canvas</h2>
+									<p>색상을 선택해 그림을 그리고 저장할 수 있습니다.</p>
+								</header>
+								<h3>
+									R :<input id="redslider" type="range" min="0" max="255" value="255" />
+									G :<input id="greenslider" type="range" min="0" max="255" value="255" />
+									B :<input id="blueslider" type="range" min="0" max="255" value="255" />
+								</h3>
+								<div class="div-canvas-set">
+									<div>선굵기  
+										<input id="sliderA" type="range" min="1" max="100" value="5" />
+										<canvas id="colorbox"></canvas>
+									</div>
+									<input type="text" id="canvasbackgroundimage" value="https://images.freeimages.com/images/large-previews/934/antelope-canyon-6-1532993.jpg" />
+									<button id="imagesubmit" type="submit">링크로 바탕사진적용</button>
+									<button id="noimage">
+										현재 팔레트로 바탕칠하기
+									</button>
+									<a href="" download="my_painting.png" id="download">다운로드</a>
+								</div>
+								<div class="wrapper-canvas">
+									<canvas id="theCanvas" width="1200" height="800"></canvas>
+								</div>
+
+								
+							</article>
+					</div>
+				</div>
+
+			<!-- Footer -->
+			<div id="footer-wrapper">
+				<div id="footer" class="container">
+					<header class="major">
+						<h2>이카운트 채용 확정형 과정 1기 1조</h2>
+						<br/>
+						<a href="portfolio/김보라.html">김보라</a><br />
+							<a href="portfolio/안현욱.html">안현욱</a><br />
+							<a href="portfolio/이대익.html">이대익</a><br />
+							<a href="portfolio/임현기.html">임현기</a>
+					</header>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>이카운트 1조</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    function scrollMove(seq){
+        var offset = $("#section" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+	}
+    window.onload = function () {
+        var object = document.getElementById("logoObject");
+        var svgDocument = object.contentDocument;
+        console.log(svgDocument.getElementsByTagName("path"));
+        let color = svgDocument.getElementsByTagName("path");
+
+		$('#logoObject').mouseover(function () {
+            for (let i = 1; i < color.length; i++) {
+                color[i].setAttribute("style", "fill:#b30413");
+            }
+        })
+		$('#logoObject').mouseleave(function () {
+            for (let i = 1; i < color.length; i++) {
+                color[i].setAttribute("style", "fill:#c32433");
+            }
+
+        });
+    };
+</script>
+
+<body class="left-sidebar is-preload"  id="section0">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header-wrapper">
+			<div id="header" class="container">
+
+				<!-- Logo -->
+				<h1 id="logo"><a href="home.html">HOME</a></h1>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="home.html">HOME</a></li>
+						<li>
+							<a href="#">ABOUT</a>
+							<ul>
+								<li><a href="portfolio/김보라.html">김보라</a></li>
+								<li><a href="portfolio/안현욱.html">안현욱</a></li>
+								<li><a href="portfolio/이대익.html">이대익</a></li>
+								<li><a href="portfolio/임현기.html">임현기</a></li>
+							</ul>
+						</li>
+						<li><a href="map.html">MAP</a></li>
+						<li class="break"><a href="canvas.html">CANVAS</a></li>
+						<li><a href="svg.html">SVG</a></li>
+						<li><a href="kanban.html">KANBAN</a></li>
+					</ul>
+				</nav>
+
+
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div class="wrapper">
+			<div class="container" id="main">
+				<div class="row gtr-150">
+					<div class="col-4 col-12-narrower">
+
+						<!-- Sidebar -->
+						<section id="sidebar">
+							<section>
+								<div class="menu" onclick="scrollMove(1)">SVG의 정의</div>
+								<div class="menu" onclick="scrollMove(2)">이미지 형식</div>
+								<div class="menu" onclick="scrollMove(3)">SVG를 이용하여 <br />도형그리기</div>
+								<div class="menu" onclick="scrollMove(4)">SVG 사용법</div>
+								<div class="menu" onclick="scrollMove(5)">비트맵 이미지 <br />SVG로 변환하기</div>
+								<div class="menu" onclick="scrollMove(0)">↑Top</div>
+							</section>
+						</section>
+
+					</div>
+					<div class="col-8 col-12-narrower imp-narrower">
+
+						<!-- Content -->
+						<article id="content">
+							<h2>SVG</h2>
+							<h2 class="section-title" id="section1"><b>🔎SVG의 정의</b></h2>
+							<object type="text/html" data="star_Test.html" width="512" height="524"></object>
+							<!--별 애니메이션 호출-->
+							<div class="cite-souce">출처 : https://nykim.work/35</div>
+							<p>SVG(Scalable Vector Graphics)는 상호작용 및 애니메이션을 지원하는 벡터 이미지 형식입니다. <br /><br />
+
+								벡터 기반이라는 단어가 생소한데, 좌표와 좌표를 연결하여 표현한 그래픽이라고 이해하시면 됩니다.각 좌표값을 기반으로 선과 도형을 연결하여 이미지를
+								구현한 것을 SVG라고 합니다.<br /><br />
+
+								이러한 특징 덕분에 크기를 조절해도 비트맵 이미지처럼 깨지지 않는 장점이 있습니다.</p>
+
+
+							<h2 class="section-title" id="section2"><b>🔎이미지 형식</b></h2>
+							<img src="./images/Bitmap_VS_SVG.svg.png" style="width:75%" onclick="onClick(this)"
+								alt="Concrete meets bricks">
+							<div>
+								<!--비트맵 이미지 설명-->
+								<h3><b class="red-text">비트맵 이미지 형식</b></h3>
+								<p>우리가 흔히 알고 있는 jpg, png 이미지 형식은 비트맵 이미지라고 합니다.</p>
+								<p>비트맵 이미지란 서로 다른 점들이 모여서 그림으로 그려지는 이미지 표현 방식을 말합니다.</p>
+								<p>비트맵 이미지는 확대를 하면 이미지의 손상이 발생하기 때문에, 웹 페이지의 미관을 해칠 수 있습니다. 그렇다고 이미지의 출력을 크게 하면 용량이
+									커지게 됩니다.</p>
+								<p>미국의 대기업 아마존은 홈페이지의 로딩시간이 0.1초 지연될 때마다 판매율이 1퍼센트 감소한다는 결과를 발견하였습니다.</p>
+							</div>
+							<div>
+								<!--벡터 이미지 설명-->
+								<h3><b class="red-text">벡터 이미지 형식</b></h3>
+								<p>벡터 이미지는 비트맵 이미지 형식보다 용량이 작고, 그래픽으로 구현하기때문에 이미지 파일을 http 요청을 로드할 필요가 없기 때문에 로딩속도가
+									더 빠릅니다.</p>
+								<p>또한 벡터 이미지는 점과 점 사이의 계산을 통해 그리는 특성상 이미지를 확대해도 손상이 없습니다.</p>
+								<p>하지만 복잡한 이미지를 표현하려면 오히려 비트맵 형식보다 로딩속도가 느려질 수 있습니다.</p>
+								<p>이모티콘이나 로고처럼 간단한 파일을 표현할 때는 SVG, 사진과 같은 정교한 이미지는 PNG나 JPG가 적합합니다. </p>
+							</div>
+							<h2 class="section-title" id="section3"><b>🔎SVG를 이용하여 도형그리기</b></h2>
+							<p>
+								정교한 그래픽은 별도의 디자인 프로그램을 이용하여야 하지만 기본적인 도형은 HTML이나 CSS를 사용해 그릴 수 있습니다.
+							</p>
+							<p>여기서는 원을 한 번 그려보겠습니다.</p>
+							<div>
+								<!--svg 코드 텍스트박스와 실제 구현한 svg 이미지코드-->
+								<div>
+									<textarea id="circleCode" rows="3" cols="85">
+<svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg> 
+            </textarea>
+								</div>
+								<div>
+									<svg width="50%" height="50%" id="circleSVG">
+										<circle cx="60" cy="60" r="50" stroke="green" stroke-width="4" fill="yellow" />
+										Sorry, your browser does not support inline SVG.
+									</svg>
+								</div>
+
+							</div>
+
+							<div>
+								<h2 class="section-title" id="section4"><b>🔎SVG 사용법</b></h2>
+								<p>SVG를 웹 페이지에서 구현하는 방법은 크게 4가지가 있습니다.</p>
+								<ul>
+									<li>img 태그</li>
+									<li>background-image</li>
+									<li>inline</li>
+									<li>object 태그</li>
+								</ul>
+							</div>
+							<div>
+								<!--SVG 사용법 4가지 설명 박스-->
+								<h3>img 태그</h3>
+								<p>일반적인 이미지처럼 html의 body에 img 태그를 삽입할 수 있습니다.</p>
+								<h3>background-image</h3>
+								<p>일반적인 이미지처럼 css의 background-image 속성을 이용하는 방법입니다.</p>
+								<h3>inline</h3>
+								<p>HTML의 body태그 안에 직접 코드를 넣어주는 방식입니다.</p>
+								<p>인라인 방식은 HTTP 요청을 받지 않기 때문에 다른 방식보다 로딩속도가 빠른 장점이 있습니다.</p>
+								<p>하지만 HTML이 더러워 지는 단점이 있습니다. 위에서 봤던 원 도형 예제가 인라인 방식입니다.</p>
+								<h3>object 태그</h3>
+								<p>외부에서 SVG파일을 불러오는 방법입니다.</p>
+								<p>HTML의 내부에 직접 코드를 넣지 않고 SVG를 조작하는 경우에 가장 좋은 방법입니다.</p>
+							</div>
+							<div>
+								<h3>
+									<div class="red-text">TIP</div>
+								</h3>
+								<ul>
+									<li>이미지에 별다른 조작을 가하지 않을것이다 → <div class="red-text">img 태그</div> or <div
+											class="red-text">background-image</div>
+									</li>
+									<li>SVG가 필요하고 이미지에 조작을 가할 것이다 → <div class="red-text">>inline</div> or <div
+											class="red-text">object태그</div>
+									</li>
+								</ul>
+							</div>
+							<h2 class="section-title" id="section5"><b>🔎비트맵 이미지 SVG로 변환하기</b></h2>
+							<p>디자인 프로그램을 이용해서 비트맵이미지를 변환할 수 있습니다.</p>
+
+
+							<!--PNG 이미지 로고-->
+							<img src="images/Ecount.png" width="250" height="250" />
+s
+
+
+							<!--SVG 이미지 로고-->
+							<object type="image/svg+xml" data="EC.svg" width="250" height="250"></object>
+
+
+
+							<p>왼쪽은 PNG 원본, 오른쪽은 변환한 SVG 이미지입니다.</p>
+							<p><b>변환한 SVG 이미지에 인터랙티브 SVG 애니메이션을 구현해 보겠습니다.</b></p>
+
+
+							<!-- 구현 -->
+								<h3><b>구현</b></h3>
+								<object type="image/svg+xml" data="EC.svg" id="logoObject"></object>
+						</article>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
